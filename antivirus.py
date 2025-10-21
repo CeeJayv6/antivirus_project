@@ -2,6 +2,14 @@ import os
 import hashlib
 import pyfiglet
 import magic
+import shutil # allows moving files
+
+QUARANTINE_FOLDER = "quarantine"
+
+# Ensures the quarantine folder exists
+
+if not os.path.exists(QUARANTINE_FOLDER):
+    os.markedirs(QUARANTINE_FOLDER)
 
 def display_banner():
     banner = pyfiglet.figlet_format("AntiVirus")
@@ -49,6 +57,15 @@ def main():
             update_virus_definitions(file_path)
         else:
             print("Invalid file path. Try again.\n")
+
+
+def quarantine_file(file_path):
+
+    file_name = os.path.basename(file_path)                      #extract just the file name
+    destination = os.path.join(QUARANTINE_FOLDER, file_name)     #path in quarantine folder
+    shutil.move(file_path, destination)                          #move the file
+    print(f"File moved to quarantine: {destination}")            #inform the user
+
 
 if __name__ == "__main__":
     main()
