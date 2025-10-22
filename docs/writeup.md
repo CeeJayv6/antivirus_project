@@ -1,72 +1,59 @@
-\# Antivirus Project Write-Up
+# Antivirus Project
 
+## Overview
 
+This project is a **Python-based antivirus scanner** I developed as part of my cybersecurity learning journey.  
 
-\## Project Overview
+The program scans files for **known virus hashes** using SHA-256, identifies file types with the `python-magic` library, and includes a **quarantine feature** for infected files. The console interface is enhanced with an ASCII banner using `pyfiglet` for a polished user experience.
 
-This project is a Python-based antivirus scanner I developed as part of my cybersecurity learning journey.  
+This project demonstrates hands-on skills in Python, file handling, hashing, and Git/GitHub version control.
 
-It scans files for known virus hashes and identifies file types using the `python-magic` library. The project also includes a simple ASCII banner using `pyfiglet` for a polished console interface.
+---
 
+## Key Features
 
+- **SHA-256 hashing** to detect known viruses  
+- **File type detection** using `python-magic`  
+- **Quarantine feature** to isolate infected files  
+- **Console interface** with ASCII banner  
+- **Individual file scanning** via user input  
 
-\## Features
+---
 
-\- SHA-256 hashing to detect known viruses
+## Skills & Learning
 
-\- File type detection using `python-magic`
+Through this project, I developed experience in:
 
-\- Console interface with ASCII banner
+- File hashing and virus signature detection  
+- Identifying file types beyond simple extensions  
+- Error handling and user input validation in Python  
+- Organizing a Python project with Git and GitHub for version control  
 
-\- Scan individual files by entering their path
+This project also strengthened my **practical cybersecurity skills** in safe malware testing using test hashes.
 
+---
 
+## Challenges
 
-\## Learning Experience
+- Installing and configuring `python-magic` on Windows  
+- Handling invalid or inaccessible file paths  
+- Ensuring SHA-256 hashing works reliably for all file types  
 
-Through this project, I learned how antivirus programs identify malicious files, including:  
+---
 
-\- Calculating file hashes to match known virus signatures  
+## Future Improvements
 
-\- Detecting file types reliably beyond just the file extension  
+- Real-time folder monitoring for automatic scanning  
+- Automatic virus signature updates via the internet  
+- Logging and scan history for audit purposes  
+- GUI interface for easier user interaction  
 
-\- Handling user input and file errors in Python  
+---
 
+## How to Run
 
-
-This project also helped me strengthen my Git and GitHub skills by version-controlling my code and pushing it to a repository.
-
-
-
-\## Challenges
-
-\- Setting up `python-magic` on Windows initially  
-
-\- Handling invalid file paths or unreadable files  
-
-\- Ensuring SHA-256 hashing works correctly for all file types
-
-
-
-\## Future Improvements
-
-\- Add automatic updates for virus signatures  
-
-\- Add a quarantine feature for detected files  
-
-\- Integrate a GUI for easier interaction  
-
-\- Include real-time scanning capabilities  
-
-
-
-\## How to Run
-
-1\. Install dependencies:
+1. **Clone the repository**:
 
 ```bash
-
-pip install -r requirements.txt
-
-
-
+git clone https://github.com/CeeJayv6/antivirus_project.git
+cd antivirus_project
